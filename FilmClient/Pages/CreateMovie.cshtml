@@ -1,0 +1,36 @@
+﻿@page
+@model FilmClient.Pages.CreateMovieModel
+@{
+    ViewData["Title"] = "Create Movie";
+}
+
+
+<h1>Create a New Movie</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Movie.Title"></label>
+        <input asp-for="Movie.Title" class="form-control" />
+
+        <label asp-for="Movie.YearofRelease"></label>
+        <input asp-for="Movie.YearofRelease" class="form-control" />
+
+        <label asp-for="Movie.Rating"></label>
+        <input asp-for="Movie.Rating" class="form-control" />
+
+        <label asp-for="Movie.MainLanguage"></label>
+        <input asp-for="Movie.MainLanguage" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Select Directors</label>
+        @foreach (var director in Model.AllDirectors)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="SelectedDirectors" value="@director.DirectorId" />
+                <label class="form-check-label">@director.Name</label>
+            </div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

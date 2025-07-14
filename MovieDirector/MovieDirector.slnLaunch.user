@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "MovieDirector.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\FilmClient\\FilmClient.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

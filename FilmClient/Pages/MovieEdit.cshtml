@@ -1,0 +1,25 @@
+﻿@page
+@model FilmClient.Pages.MovieEditModel
+@{
+    ViewData["Title"] = "Movie Edit";
+}
+
+<h3> Enter Details of Movie</h3>
+
+<form method="post" >
+
+    <label asp-for="movieDTO.Title"></label>
+    <input class="form-control mt-5" asp-for="movieDTO.Title" />
+
+    <label asp-for="movieDTO.YearofRelease"></label>
+    <input class="form-control mt-5" asp-for="movieDTO.YearofRelease" />
+
+    <label asp-for="movieDTO.MainLanguage"></label>
+    <input class="form-control mt-5" asp-for="movieDTO.MainLanguage"  />
+
+    <label asp-for="movieDTO.Rating"></label>
+    <input class="form-control mt-5" asp-for="movieDTO.Rating" />
+
+    <button class="btn btn-primary">Submit</button>
+</form>
+

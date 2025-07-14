@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4" style="text">Welcome</h1>
+</div>
+
+<header>
+    <a class="nav-link text-dark" asp-area="" asp-page="/CreateDirector" style="float : right;background-color:aquamarine;margin-left:5px">Create Director</a>
+    <a class="nav-link text-dark" asp-area="" asp-page="/CreateMovie" style="float : right;background-color:aquamarine">Create Movie</a>
+</header>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Movie Id</th>
+            <th>Title</th>
+            <th>Directors</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>    
+                <td>@movie.MovieId</td>
+                <td>@movie.Title</td>
+                <td>
+                @if (movie.DirectorIds != null)
+                {
+                    var directorNames = Model.Directors
+                    .Where(d=>d.movies.Where(mov=>mov.MovieId==movie.MovieId).Select(m=>m.Title).Count()!=0)
+                    .Select(d => d.Name);
+                        foreach(var name in directorNames)
+                        {
+                            @name.ToString();
+                            <pre></pre>
+                        }
+                }
+                else
+                {
+                    <span>No Directors</span>
+                }
+                
+                </td>
+                <td>
+                    <form asp-page-handler="Delete" asp-route-id="@movie.MovieId" method="post">
+                        <button type="submit" class="nav-link text-dark" style="float : right;background-color:aquamarine;margin-left:5px">Delete</button>
+                    </form>
+
+                    <a class="nav-link text-dark" asp-area="" asp-route-id="@movie.MovieId" asp-page="/MovieEdit" style="float : right;background-color:aquamarine">Edit</a>
+                    
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

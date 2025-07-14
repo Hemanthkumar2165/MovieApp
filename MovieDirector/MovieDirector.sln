@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDirector", "MovieDirector.csproj", "{42102D5C-4501-47DA-BD53-EC41B2450585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmClient", "..\FilmClient\FilmClient.csproj", "{FC7F1557-E742-4387-B7B0-DD74E8E6B4CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42102D5C-4501-47DA-BD53-EC41B2450585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42102D5C-4501-47DA-BD53-EC41B2450585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42102D5C-4501-47DA-BD53-EC41B2450585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42102D5C-4501-47DA-BD53-EC41B2450585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC7F1557-E742-4387-B7B0-DD74E8E6B4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC7F1557-E742-4387-B7B0-DD74E8E6B4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC7F1557-E742-4387-B7B0-DD74E8E6B4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC7F1557-E742-4387-B7B0-DD74E8E6B4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76263061-F956-472D-8154-AE1128EE2958}
+	EndGlobalSection
+EndGlobal
